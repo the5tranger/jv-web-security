@@ -16,7 +16,7 @@ import mate.util.ConnectionUtil;
 @Dao
 public class DriverDaoImpl implements DriverDao {
     @Override
-    public Optional<Driver> findByUsername(String username) {
+    public Optional<Driver> findByLogin(String username) {
         String query = "SELECT * FROM drivers WHERE login = ? "
                 + "AND deleted = FALSE";
         try (Connection connection = ConnectionUtil.getConnection();

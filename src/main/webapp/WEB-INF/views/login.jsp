@@ -11,5 +11,6 @@
         <button type="submit">Login</button>
     </form>
     <h5> <a href="${pageContext.request.contextPath}/drivers/add">Register</a></h5>
+    <h6>*Default data for test login: bobus15; password: 123</h6>
 </body>
 </html>

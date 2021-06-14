@@ -1,8 +1,8 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
-CREATE SCHEMA IF NOT EXISTS securityDb;
-USE securityDb;
+CREATE SCHEMA IF NOT EXISTS taxi_serviceDb;
+USE taxi_serviceDb;
 
 -- ----------------------------
 -- Table structure for drivers
@@ -59,3 +59,14 @@ CREATE TABLE `cars_drivers`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 SET FOREIGN_KEY_CHECKS = 1;
+
+SET GLOBAL time_zone = '+3:00';
+
+INSERT INTO manufacturers (name, country) VALUES ('BMW', 'German');
+
+INSERT INTO drivers (name, license_number, login, password) VALUES ('Bob', 'ND1234567', 'bobus15', 123);
+
+INSERT INTO cars (model, manufacturer_id) VALUES ('X5', 1);
+
+INSERT INTO cars_drivers (car_id, driver_id) VALUES (1, 1);
+
